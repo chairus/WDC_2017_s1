@@ -1,0 +1,124 @@
+body {
+    background-color: dodgerblue;
+}
+
+button {
+    position: absolute;
+    color: black;
+    background: none;
+    border: none;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: -3px;
+    font-weight: 300;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { 
+    margin-right: 15px; 
+/*    transition: margin 0.3s;*/
+}
+
+i {
+    color: black;
+    margin-right: 10px;
+}
+
+#wrapper {
+    background-color: snow;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    overflow: hidden;
+}
+
+#web-app-title {
+    font-family: "Exo", sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 500;
+	line-height: 26.4px;
+    padding: 10px;
+}
+
+#calendar-header, #journal-entries-header, #tag-header {
+    border: 1px solid white;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: darkblue;
+    color: antiquewhite;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#calendar-header, #tag-header {
+    width: 397px;
+}
+
+#journal-entries-header {
+    position: absolute;
+    width: 910px;
+    top: 0;
+    right: 0;
+}
+
+#right-panel, #left-panel {
+    position: absolute;
+    overflow-y: scroll;
+}
+
+#right-panel {
+    top: 0;
+    bottom: 0;
+    width: 434px;
+}
+
+#left-panel {
+    top: 45px;
+    bottom: 0;
+    width: 924px;
+}
+
+#search-entry, .btn-search {
+    position: absolute;
+    margin-top: -5px;
+    top: 25px;
+}
+
+#search-entry {
+    right: 760px;
+}
+
+.btn-add-entry, .btn-sign-out, #left-panel {
+    right: 0;
+}
+
+.btn-add-entry {
+    top: 25px;
+    width: 200px;
+}
+
+.btn-sign-out, .btn-settings {
+    width: 170px;
+}
+
+.btn-sign-out {
+    bottom: 8px;
+}
+
+.btn-settings {
+    bottom: 8px;
+    right: 200px;
+}
+
+.btn-search {
+    right: 730px;
+    color: black;
+}
