@@ -1,0 +1,72 @@
+body {
+	background: dodgerblue;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+	font-size: 500%;
+	text-align: center;
+	font-family: Courier, courier, serif;
+	color: #555555;
+}
+
+p {
+	line-height: 1;
+}
+
+div {
+	text-align: center;
+
+	line-height: 3;
+
+
+}
+/* better to create a %size or px size?*/
+.login {
+
+	margin: auto;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 550px;
+	height: 400px;
+	padding: 25px;
+}
+form{
+
+}
+label{
+	width: 100%;
+}
+
+/* */ 
+input {
+	display: block;
+	text-align: left;
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+. button{
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+a:link{
+	color: grey;
+}
+a:visited{
+	color: grey;
+}
+a:active{
+	color;
+}
+a:hover{
+	color;
+}
