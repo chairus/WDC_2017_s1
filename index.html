@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Exo" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <title>Memory Note</title>
@@ -11,12 +12,10 @@
     
     <body>
         <div id="web-app-title">Memory Note</div>
-        <input type="text" id="search-entry" placeholder="Search entry">
-        <button class="btn-search ion-search"></button>
         <div id="wrapper">
             
-            <div id="right-panel">
-                <div id="calendar-header"><i class="ion-calendar" style="color:snow;"></i>Calendar</div>
+            <div id="left-panel">
+                <div id="calendar-header"><i class="ion-calendar"></i>Calendar</div>
                 <div>Date</div>
                 <div>Date</div>
                 <div>Date</div>
@@ -32,7 +31,11 @@
                 <div>Date</div>
                 <div>Date</div>
                 <div>Date</div>
-                <div id="tag-header"><i class="ion-pricetag" style="color:snow;"></i>Tags</div>
+                <div id="tag-header">
+                    <i class="ion-pricetag"></i>
+                    <button class="btn-add-tag ion-plus-round" title="Create tag"></button><button class="btn-delete-tag ion-trash-b" title="Delete all selected tags"></button>
+                    Tags
+                </div>
                 <div>Tags</div>
                 <div>Tags</div>
                 <div>Tags</div>
@@ -48,53 +51,64 @@
                 <div>Tags</div>
                 <div>Tags</div>
             </div>
-            <div id="journal-entries-header"><i class="ion-document-text" style="color:snow;"></i>Journal Entries</div>
-            <div id="left-panel">
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
-                <div>Entry</div>
+            <div id="journal-entries-header"><i class="ion-document-text"></i>Journal entries</div>
+            <div id="edit-entry-header" style="display:none;"><i class="ion-edit"></i>Edit entry</div>
+            <div id="right-panel">
+                <div id="journal-entries">
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                    <div>Entry</div>
+                </div>
             </div>
         </div>
+        <input type="text" id="search-entry" placeholder="Search...">
         <button class="btn-add-entry"><i class="ion-plus-round"></i>Add entry</button>
-        <button class="btn-sign-out"><i class="ion-power"></i>Sign out</button>
-        <button class="btn-settings"><i class="ion-settings"></i>Settings </button>
-        
+        <div class="save-and-del-btn">
+            <button class="btn-save-entry" title="Save entry"><i class="ion-checkmark-round"></i>Save</button>
+            <button class="btn-delete-entry" title="Delete entry"><i class="ion-trash-b"></i>Delete</button>
+        </div>
+            
+        <div style="position:absolute; right:0px; bottom:5px;">
+            <button class="btn-sign-out"><i class="ion-power"></i>Sign out</button>
+            <button class="btn-settings"><i class="ion-settings"></i>Settings </button>
+        </div>
+        <script src="web_app.js"></script>
     </body>
 </html>
