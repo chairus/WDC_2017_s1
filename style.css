@@ -2,9 +2,20 @@ body {
     background-color: dodgerblue;
 }
 
+input {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
 button {
     position: absolute;
-    color: black;
+    color: snow;
     background: none;
     border: none;
     font-family: "Comfortaa", sans-serif;
@@ -15,14 +26,16 @@ button {
     font-weight: 300;
 }
 
+/*
 button:hover { font-weight: 600; }
 button:hover i { 
-    margin-right: 15px; 
-/*    transition: margin 0.3s;*/
+    margin-right: 15px;
+    transition: margin 0.3s;
 }
+*/
 
 i {
-    color: black;
+    color: snow;
     margin-right: 10px;
 }
 
@@ -44,27 +57,28 @@ i {
 	font-weight: 500;
 	line-height: 26.4px;
     padding: 10px;
+    color: snow;
 }
 
-#calendar-header, #journal-entries-header, #tag-header {
-    border: 1px solid white;
+#calendar-header, #journal-entries-header, #tag-header, #edit-entry-header {
+/*    border: 1px solid white;*/
     padding: 10px;
     margin: 0;
     text-align: left;
     background-color: darkblue;
-    color: antiquewhite;
+    color: snow;
     font-family: Lato;
     font-size: 20px;
     font-weight: 700;
 }
 
 #calendar-header, #tag-header {
-    width: 397px;
+    width: 399px;
 }
 
-#journal-entries-header {
+#journal-entries-header, #edit-entry-header {
     position: absolute;
-    width: 910px;
+    width: 912px;
     top: 0;
     right: 0;
 }
@@ -74,51 +88,79 @@ i {
     overflow-y: scroll;
 }
 
-#right-panel {
+#left-panel {
     top: 0;
     bottom: 0;
     width: 434px;
 }
 
-#left-panel {
+#right-panel {
     top: 45px;
     bottom: 0;
     width: 924px;
 }
 
-#search-entry, .btn-search {
+#search-entry {
     position: absolute;
     margin-top: -5px;
     top: 25px;
-}
-
-#search-entry {
     right: 760px;
+    padding: 5px;
+    display: block;
 }
 
-.btn-add-entry, .btn-sign-out, #left-panel {
+.btn-add-entry, #right-panel {
     right: 0;
 }
 
 .btn-add-entry {
     top: 25px;
     width: 200px;
+    display: block;
+    text-transform: capitalize;
 }
 
 .btn-sign-out, .btn-settings {
-    width: 170px;
+    width: 150px;
+    bottom: 8px;
+    text-transform: capitalize;
 }
 
 .btn-sign-out {
-    bottom: 8px;
+    right: 25px;
 }
 
 .btn-settings {
-    bottom: 8px;
-    right: 200px;
+    right: 205px;
 }
 
-.btn-search {
-    right: 730px;
-    color: black;
+.btn-add-tag, .btn-delete-tag {
+    font-size: 25px;
+    margin-top: -3px;
+}
+
+.btn-add-tag {
+    right: 8px;
+}
+
+.btn-delete-tag {
+    right: 60px;
+}
+
+.save-and-del-btn {
+    position: absolute;
+    top: 23px;
+    left: 420px;
+    display: none;
+}
+
+.btn-save-entry, .btn-delete-entry {
+    font-size: 20px;
+    width: 140px;
+    text-transform: capitalize;
+}
+
+.btn-delete-entry {
+/*    margin-left: 90px;*/
+    margin-left: 165px;
 }
