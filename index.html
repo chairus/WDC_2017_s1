@@ -13,7 +13,6 @@
     <body>
         <div id="web-app-title">Memory Note</div>
         <div id="wrapper">
-            
             <div id="left-panel">
                 <div id="calendar-header"><i class="ion-calendar"></i>Calendar</div>
                 <div>Date</div>
@@ -60,14 +59,14 @@
                     <div>Entry3</div>
                 </div>
                 
-                <div id="edit-entry" style="display:none;">
+                <form id="edit-entry" style="display:none;">
                     <input type="text" name="entryTitle" id="entry-title" placeholder="Enter title" spellcheck="true">
                     <br><br>
                     <textarea type="text" name="entryContent" id="entry-content" placeholder="Enter text" cols="100" rows="11" spellcheck="true"></textarea>
-                </div>
+                </form>
             </div>
         </div>
-        <input type="text" name="search" id="search-entry" placeholder="Search...">
+        <input type="search" name="search" id="search-entry" placeholder="Search">
         <button class="btn-add-entry"><i class="ion-plus-round"></i>Add entry</button>
         <div class="save-and-del-btn">
             <button class="btn-save-entry" title="Save entry"><i class="ion-checkmark-round"></i>Save</button>
