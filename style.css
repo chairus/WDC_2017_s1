@@ -2,17 +2,6 @@ body {
     background-color: dodgerblue;
 }
 
-input {
-    border: 2px solid #dadada;
-    border-radius: 7px;
-}
-
-input:focus {
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
-
 button {
     position: absolute;
     color: snow;
@@ -101,12 +90,65 @@ i {
 }
 
 #search-entry {
+    left: 440px;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-image:url('http://i47.tinypic.com/r02vbq.png');
+    background-repeat: no-repeat;
+    background-position: -20px -20px;
+    font-size: 16px;
+    width: 110px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
     position: absolute;
     margin-top: -5px;
     top: 25px;
     right: 760px;
-    padding: 5px;
-    display: block;
+    padding: 5px 1px 5px 25px;
+}
+
+#search-entry:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    width: 210px;
+}
+
+#entry-title, #entry-content {
+    position: relative;
+    width: 95%;
+    font-size: 20px;
+    font-family: monospace;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#entry-title:focus, #entry-content:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#entry-content {
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#entry-title {
+    margin-top: 20px;
+}
+
+#edit-entry {
+    position: absolute;
+    top: 20px;
+    bottom: 100px;
+    right: 20px;
+    left: 20px;
+    box-shadow: 1px 1px 10px black;
 }
 
 .btn-add-entry, #right-panel {
