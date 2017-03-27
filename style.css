@@ -232,3 +232,75 @@ i {
     left: 430px;
     
 }
+
+/* The style for setting's pop up and its content*/
+.modal {
+  display:none;
+  position: fixed;
+  left: 0;
+  top:0;
+  padding-top: 100px;
+  z-index : 1;
+  width:100%;
+  height:100%;
+  overflow: auto; /*enabling scroll if needed */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.setting-popup {
+    visibility: hidden;
+    width: 30%;
+	height:30%;
+    background-color: dodgerblue;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+	top: 50%;
+  	left: 50%;
+ 	transform: translate(-50%, -50%);
+	font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+}
+
+.change-theme-color {
+	margin-top:50px;
+	text-align:left;
+}
+/*Apply and cancel for popup*/
+.btn-apply {
+	width: 150px;
+    bottom: 8px;
+	right:150px;
+    text-transform: capitalize;
+}
+
+.btn-cancel{
+	width: 150px;
+    bottom: 8px;
+	right:5px;
+    text-transform: capitalize;
+}
+/* Dropdown list for change color*/
+#color-options {
+
+}
+/* */
+ .show {
+	 visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
