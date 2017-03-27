@@ -62,10 +62,30 @@
             <button class="btn-delete-entry" title="Delete entry" onclick="removeEntryCaller()"><i class="ion-trash-b"></i>Delete</button>
         </div>
             
-        <div style="position:absolute; right:0px; bottom:5px;">
-            <button class="btn-sign-out"><i class="ion-power"></i>Sign out</button>
-            <button class="btn-settings"><i class="ion-settings"></i>Settings </button>
-        </div>
+        <section style="position:absolute; right:0px; bottom:5px;">
+            <button class="btn-sign-out"> <a href = "welcome.html"><i class="ion-power"></i>Sign out</a></button>
+            <button class="btn-settings"><i class="ion-settings"></i>Settings</button>
+        </section>
+        <!-- POPUP HTML-->
+        <section class = "modal" id = "settModal" >
+          </section>
+            <span class="setting-popup" id = "settPopup">Settings:
+        	     <section class = "change-theme-color">Change Theme Color:
+        		       <span>
+                	    <select id = "color-options">
+                        <option value = "Blue" class="color"> Blue </option>
+                        <option value = "Red" class="color"> Red </option>
+                      </select>
+                  </span>
+              </section>
+              <button class ="btn-apply"><i class = "ion-checkmark-round"></i>Apply</button>
+              <button class ="btn-cancel"><i class = "ion-close"></i>Cancel</button>
+            </span>
+        <script src="web_app.js"></script>
+        <!-- -->
+
+    </body>
+        
         <script src="web_app.js"></script>
     </body>
 </html>
