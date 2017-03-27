@@ -1,5 +1,5 @@
 var entryCount = 0;
-var activeIdEntryWrapper;
+var activeIdEntryWrapper = null;
 
 function changeToHomepage() {
     // Display the headers, buttons and search input of the journal entry page
@@ -33,31 +33,38 @@ function changeToEntryPage() {
 document.querySelector(".btn-add-entry").addEventListener("click", function() {
     changeToEntryPage();
     
+    activeIdEntryWrapper = null;
+    
     document.querySelector(".btn-save-entry").removeEventListener("click", replaceEntryCaller);
     document.querySelector(".btn-save-entry").addEventListener("click", postEntry);
 });
 
 
-function deleteEntry() {
-    var title = document.getElementById("entry-title").value;
-    var content = document.getElementById("entry-content").value;
-    
-    if (title !== "" || content !== "") {
-        
-    }
-    
-    changeToHomepage();
-}
+//function deleteEntry() {
+//    var title = document.getElementById("entry-title").value;
+//    var content = document.getElementById("entry-content").value;
+//    
+//    if (title !== "" || content !== "") {
+//        
+//    }
+//    
+//    changeToHomepage();
+//}
 
 
 function removeEntryCaller() {
-    removeEntry(activeIdEntryWrapper);
+    if (activeIdEntryWrapper !== null) {
+        removeEntry(activeIdEntryWrapper);
+    } else {
+        changeToHomepage();
+    }
 }
 
 function removeEntry(id) {
     var parent = document.getElementById("journal-entries");
     var child = document.getElementById(id);
     parent.removeChild(child);
+    changeToHomepage();
 }
 
 function postEntry() {
@@ -121,6 +128,7 @@ function postEntry() {
 
 function editEntry(id) {
     activeIdEntryWrapper = id;
+    console.log(activeIdEntryWrapper);
     
     changeToEntryPage();
     
@@ -129,8 +137,8 @@ function editEntry(id) {
     document.querySelector(".btn-save-entry").addEventListener("click", replaceEntryCaller);
     
     // Change Event Listener of the delete button
-    document.querySelector(".btn-delete-entry").removeEventListener("click", deleteEntry);
-    document.querySelector(".btn-delete-entry").addEventListener("click", removeEntryCaller);
+//    document.querySelector(".btn-delete-entry").removeEventListener("click", deleteEntry);
+//    document.querySelector(".btn-delete-entry").addEventListener("click", removeEntryCaller);
     
     // Obtain the child elements of the paragraph(p) HTML element
     var childElements = document.getElementById(id).getElementsByTagName("p");
