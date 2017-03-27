@@ -15,6 +15,11 @@ button {
     font-weight: 300;
 }
 
+p:hover {
+    cursor: pointer;
+}
+
+
 /*
 button:hover { font-weight: 600; }
 button:hover i { 
@@ -118,8 +123,6 @@ i {
 #entry-title, #entry-content {
     position: relative;
     width: 95%;
-    font-size: 20px;
-    font-family: monospace;
     margin-left: 20px;
     margin-right: 20px;
     border: 0;
@@ -133,22 +136,35 @@ i {
 }
 
 #entry-content {
+    height: 365px;
     resize: none;
     margin-top: 10px;
+    background: url(textarea_background.png) repeat;
+/*    font: normal 18px/24px verdana;*/
+    font: normal 15px/24px verdana;
+    overflow: auto;
 }
 
 #entry-title {
     margin-top: 20px;
+    background: url(textarea_background.png) repeat-x;
+    font: normal 20px verdana;
 }
 
 #edit-entry {
     position: absolute;
     top: 20px;
-    bottom: 100px;
+    bottom: 20px;
     right: 20px;
     left: 20px;
     box-shadow: 1px 1px 10px black;
 }
+
+/*
+#entry1:hover {
+    cursor: pointer;
+}
+*/
 
 .btn-add-entry, #right-panel {
     right: 0;
@@ -197,18 +213,21 @@ i {
 
 .btn-save-entry, .btn-delete-entry {
     font-size: 20px;
-    width: 140px;
+    width: 130px;
     text-transform: capitalize;
 }
 
 .btn-delete-entry {
 /*    margin-left: 90px;*/
-    margin-left: 165px;
+/*    margin-left: 165px;*/
+    position: fixed;
+    top: 23px;
+    left: 590px;
 }
 
 .btn-save-entry {
     position: fixed;
     top: 23px;
-    left: 420px;
+    left: 430px;
     
 }
