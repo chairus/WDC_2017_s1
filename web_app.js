@@ -219,15 +219,14 @@ document.querySelector(".btn-apply").addEventListener("click",function(){
       document.getElementById("tag-header").style.backgroundColor = "darkblue";
       document.getElementById("edit-entry-header").style.backgroundColor = "darkblue";
     }
-    else
-      {
-        document.getElementById("settModal").style.display = "none";
-      }
+
+document.getElementById("settModal").style.display = "none";
+document.getElementById("settPopup").classList.toggle("show");    
 
 })
 
 //Event handler for "Cancel" button
 document.querySelector(".btn-cancel").addEventListener("click",function(){
-	document.getElementById("settPopup").classList.toggle("show");
-  document.getElementById("settModal").style.display = "none";
+  	document.getElementById("settPopup").classList.toggle("show");
+  	document.getElementById("settModal").style.display = "none";
 })
