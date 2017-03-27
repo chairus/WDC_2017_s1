@@ -2,12 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<!--
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
--->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600|Comfortaa|Exo|Raleway:400,700;" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700;" rel="stylesheet"> 
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <title>Memory Note</title>
@@ -49,7 +47,7 @@
                         <input type="text" name="entryTitle" id="entry-title" placeholder="Enter title" spellcheck="true" value>
                         <textarea name="entryContent" id="entry-content" placeholder="Enter text" cols="100" rows="11" spellcheck="true"></textarea>
 <!--                        <button class="btn-save-entry" title="Save entry" onclick="postMessage()"><i class="ion-checkmark-round"></i>Save</button>-->
-                        <button class="btn-delete-entry" title="Delete entry"><i class="ion-trash-b"></i>Delete</button>
+<!--                        <button class="btn-delete-entry" title="Delete entry"><i class="ion-trash-b"></i>Delete</button>-->
                     </form>
                 </div>
                 
@@ -61,7 +59,7 @@
 <!--            <button class="btn-save-entry" onclick="postEntry()" title="Save entry"><i class="ion-checkmark-round"></i>Save</button>-->
             <button class="btn-save-entry" title="Save entry"><i class="ion-checkmark-round"></i>Save</button>
             
-<!--            <button class="btn-delete-entry" title="Delete entry"><i class="ion-trash-b"></i>Delete</button>-->
+            <button class="btn-delete-entry" title="Delete entry" onclick="deleteEntry()"><i class="ion-trash-b"></i>Delete</button>
         </div>
             
         <div style="position:absolute; right:0px; bottom:5px;">

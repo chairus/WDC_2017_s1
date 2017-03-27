@@ -1,5 +1,5 @@
 var entryCount = 0;
-var idEntryWrapper;
+var activeIdEntryWrapper;
 
 function changeToHomepage() {
     // Display the headers, buttons and search input of the journal entry page
@@ -37,6 +37,28 @@ document.querySelector(".btn-add-entry").addEventListener("click", function() {
     document.querySelector(".btn-save-entry").addEventListener("click", postEntry);
 });
 
+
+function deleteEntry() {
+    var title = document.getElementById("entry-title").value;
+    var content = document.getElementById("entry-content").value;
+    
+    if (title !== "" || content !== "") {
+        
+    }
+    
+    changeToHomepage();
+}
+
+
+function removeEntryCaller() {
+    removeEntry(activeIdEntryWrapper);
+}
+
+function removeEntry(id) {
+    var parent = document.getElementById("journal-entries");
+    var child = document.getElementById(id);
+    parent.removeChild(child);
+}
 
 function postEntry() {
     var title = document.getElementById("entry-title").value;
@@ -98,13 +120,17 @@ function postEntry() {
 
 
 function editEntry(id) {
-    idEntryWrapper = id;
+    activeIdEntryWrapper = id;
     
     changeToEntryPage();
     
     // Change Event Listener of the save button
     document.querySelector(".btn-save-entry").removeEventListener("click", postEntry);
     document.querySelector(".btn-save-entry").addEventListener("click", replaceEntryCaller);
+    
+    // Change Event Listener of the delete button
+    document.querySelector(".btn-delete-entry").removeEventListener("click", deleteEntry);
+    document.querySelector(".btn-delete-entry").addEventListener("click", removeEntryCaller);
     
     // Obtain the child elements of the paragraph(p) HTML element
     var childElements = document.getElementById(id).getElementsByTagName("p");
@@ -115,7 +141,7 @@ function editEntry(id) {
 
 
 function replaceEntryCaller() {
-    replaceEntry(idEntryWrapper);
+    replaceEntry(activeIdEntryWrapper);
 }
 
 function replaceEntry(id) {
@@ -123,6 +149,7 @@ function replaceEntry(id) {
     var title = document.getElementById("entry-title").value;
     var content = document.getElementById("entry-content").value;
     
+    // Obtain the entry count number so that we can determine which entry to remove
     var idName = document.getElementById(id).getAttribute("id");
     var idEntryCount = idName.substr((idName.length-1),1);
     
