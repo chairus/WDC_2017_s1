@@ -192,3 +192,42 @@ function replaceEntry() {
     
     changeToHomepage();
 }
+
+//Event handler for "Setting" button
+document.querySelector(".btn-settings").addEventListener("click",function(){
+    document.getElementById("settPopup").classList.toggle("show");
+    document.getElementById("settModal").style.display = "block";
+})
+
+//Event handler for "Apply" button
+document.querySelector(".btn-apply").addEventListener("click",function(){
+    var a = document.getElementById("color-options");
+    var usr = a.options[a.selectedIndex].value;
+    if(usr == "Red")
+    {
+      document.getElementById("indexbody").style.backgroundColor = "Crimson";
+      document.getElementById("calendar-header").style.backgroundColor = "darkred"
+      document.getElementById("journal-entries-header").style.backgroundColor = "darkred"
+      document.getElementById("tag-header").style.backgroundColor = "darkred";
+      document.getElementById("edit-entry-header").style.backgroundColor = "darkred";
+
+    }
+    else if(usr == "Blue")
+    {
+      document.getElementById("indexbody").style.backgroundColor = "dodgerblue";
+      document.getElementById("calendar-header").style.backgroundColor = "darkblue"
+      document.getElementById("journal-entries-header").style.backgroundColor = "darkblue"
+      document.getElementById("tag-header").style.backgroundColor = "darkblue";
+      document.getElementById("edit-entry-header").style.backgroundColor = "darkblue";
+    }
+
+document.getElementById("settModal").style.display = "none";
+document.getElementById("settPopup").classList.toggle("show");    
+
+})
+
+//Event handler for "Cancel" button
+document.querySelector(".btn-cancel").addEventListener("click",function(){
+  	document.getElementById("settPopup").classList.toggle("show");
+  	document.getElementById("settModal").style.display = "none";
+})
