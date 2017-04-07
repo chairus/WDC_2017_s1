@@ -67,12 +67,13 @@ i {
 }
 
 #calendar-header, #tag-header {
-    width: 399px;
+/*    width: 399px;*/
+    width: 100%;
 }
 
 #journal-entries-header, #edit-entry-header {
     position: absolute;
-    width: 76.2%;
+    width: 65.5%;
     top: 0;
     right: 0;
 }
@@ -85,17 +86,19 @@ i {
 #left-panel {
     top: 0;
     bottom: 0;
-    width: 434px;
+    width: 33%;
+    border-right: 2px solid black;
 }
 
 #right-panel {
     top: 45px;
     bottom: 0;
-    width: 77%;
+    width: 67%;
+    border-left: 2px solid black;
 }
 
 #search-entry {
-    left: 440px;
+    left: 35%;
     border: 2px solid #dadada;
     border-radius: 7px;
     box-sizing: border-box;
@@ -127,6 +130,7 @@ i {
     margin-right: 20px;
     border: 0;
     box-sizing: border-box;
+    background: url(textarea_background.png)
 }
 
 #entry-title:focus, #entry-content:focus {
@@ -139,7 +143,7 @@ i {
     height: 365px;
     resize: none;
     margin-top: 10px;
-    background: url(textarea_background.png) repeat;
+    background-repeat: repeat;
 /*    font: normal 18px/24px verdana;*/
     font: normal 15px/24px verdana;
     overflow: auto;
@@ -147,7 +151,7 @@ i {
 
 #entry-title {
     margin-top: 20px;
-    background: url(textarea_background.png) repeat-x;
+    background-repeat: repeat-x;
     font: normal 20px verdana;
 }
 
@@ -290,8 +294,8 @@ i {
 /* */
  .show {
 	 visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
 }
 
 /* Add animation (fade in the popup) */
