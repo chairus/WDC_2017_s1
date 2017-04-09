@@ -4,6 +4,17 @@ $(document).ready(function() {
         eventMouseover: function(event, jsEvent, view) {
             displayEventTooltip(event, jsEvent, view);
         },
+        
+//        eventMouseover: function(event, jsEvent, view) {
+//            $('.fc-event-container', this).prevObject.append('<div id=\"event1\" class=\"hover-end\">'+$.fullCalendar.formatDate(event.end, 'h:mmt')+'</div>');
+//            console.log($.fullCalendar.formatDate(event.start, 'h:mmt'))
+//        },
+//
+//        eventMouseout: function(event, jsEvent, view) {
+//            $('#event1').remove();
+//        },
+        
+        
         eventClick: function(event, jsEvent, view) {
             changeToEntryPage();
             // Set title of the entry to the title of the event
@@ -178,7 +189,6 @@ function displayEventTooltip(event, jsEvent, view) {
     var pos = time.indexOf('T');
     var hours = Number(time.slice(pos+1,pos+3));
     var minutes = time.slice(pos+4,pos+6);
-    var period = "AM"; // Either "AM" or "PM"
     var tooltip = jsEvent.target.title;
     // Handles the problem when the "div" or "span" element is triggered instead of the "a" element
     var obj = jsEvent.target;
@@ -206,15 +216,8 @@ function displayEventTooltip(event, jsEvent, view) {
     if (!hasTooltip) {
         var text = document.createElement("span");
         text.setAttribute("class", "tooltiptext");
-
-        // Convert from 24-hour time format to 12-hour time format
-        if (hours >= 12) {
-            period = "PM";
-            hours = hours > 12 ? (hours - 12) : hours;
-        }
-
-        formattedTime = hours.toString() + ":" + minutes + " " + period;
-        formattedEventTime = event.title + " on " + event.start._d.toDateString() + " " + formattedTime;
+        formattedTime = $.fullCalendar.formatDate(event.start, 'h:mmt');    // fomrat time to 12-hour clock
+        formattedEventTime = event.title + " on " + event.start._d.toDateString() + " at " + formattedTime;
         var content = document.createTextNode(formattedEventTime);
         text.appendChild(content);
         obj.appendChild(text);
